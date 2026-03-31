@@ -80,7 +80,7 @@ public:
     ~DynamicBuffer() {
         // TODO: Implement destructor
         //   1. Increment g_destructorCount
-        g_constructorCount++;
+        g_destructorCount++;
         //   2. Delete the dynamically allocated array (delete[])
         delete[] m_data;
     }
@@ -94,7 +94,7 @@ public:
     DynamicBuffer(const DynamicBuffer& other) {
         // TODO: Implement copy constructor
         //   1. Increment g_copyConstructorCount
-         g_constructorCount++;
+         g_copyConstructorCount++;
         //   2. Copy m_length from other
         m_length = other.m_length;
         //   3. Allocate new memory: new char[m_length + 1]
